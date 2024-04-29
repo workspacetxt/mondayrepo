@@ -1,5 +1,14 @@
-from django.shortcuts import render
+from datetime import datetime 
+from django.http import HttpResponse
 
-# Create your views here.
-def home(request):
-    return render(request,"index.html")
+def index(request):
+    now = datetime.now()
+    html=f'''
+    <html>
+        <body>
+            <h1> Hello world</h1>
+            <p> time {now}</p>
+        </body>
+    </html>
+    '''
+    return HttpResponse(html)

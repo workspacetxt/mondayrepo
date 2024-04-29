@@ -1,7 +1,7 @@
 
 from django.urls import path
-from depapp.views import home
+from depapp.views import index
 
 urlpatterns = [
-    path('',home,name="home"),
+    path('',index),
 ]
